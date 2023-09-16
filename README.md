@@ -44,7 +44,7 @@ To run the project locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/put-your-github-username-here/name-of-your-application.git
+   git clone https://github.com/Donleke/HNG-movie-discovery-app/tree/main
    ```
 
 ## Deployment
