@@ -15,9 +15,11 @@ function Card({ data, percentage }) {
         </div>
       </Link>
 
-      <h3 data-testid="movie-title" className="mt-3">
-        {data.title}
-      </h3>
+      <Link to={`/movie/${data.id}`}>
+        <h3 data-testid="movie-title" className="mt-3">
+          {data.title}
+        </h3>
+      </Link>
 
       <div className="d-flex justify-content-between mt-3">
         <div className="d-flex gap-2 align-item-center">
@@ -37,7 +39,7 @@ function Card({ data, percentage }) {
         </div>
       </div>
 
-      <p data-testid="movie-release-date" className="mt-3">
+      <p data-testid="movie-released-date" className="mt-3">
         {" "}
         {data.release_date}
       </p>
