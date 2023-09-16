@@ -20,10 +20,11 @@ function Home() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=en=US&page=1`
+          `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en=US&page=1`
         );
 
         setHeroMovies(response.data.results.slice(0, 5));
+        console.log(heroMovies);
         setFeaturedMovies(response.data.results.slice(5, 17));
       } catch (error) {
         console.log(error);
