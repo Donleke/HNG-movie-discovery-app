@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
-import { HiMenuAlt4 } from "react-icons/Hi";
+import { HiMenuAlt4 } from "react-icons/hi";
 
 export default function Navbar() {
   return (
