@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none !important;
+}
+h1 {
+  font-size: calc(28px + (48 - 28) * (100vw - 320px) / (1440 - 320)) !important;
+}
+
+h2 {
+  font-size: calc(24px + (36 - 24) * (100vw - 320px) / (1440 - 320)) !important;
+}
+
+h3 {
+  font-size: calc(20px + (24 - 20) * (100vw - 320px) / (1440 - 320)) !important;
+}
+
+h4 {
+  font-size: calc(18px + (20 - 18) * (100vw - 320px) / (1440 - 320)) !important;
+}
+
+h5 {
+  font-size: calc(15px + (18 - 15) * (100vw - 320px) / (1440 - 320)) !important;
+}
+
+p {
+  font-size: calc(14px + (16 - 14) * (100vw - 320px) / (1440 - 320)) !important;
+}
+
+h6 {
+  font-size: calc(
+    12.5px + (14 - 12.5) * (100vw - 320px) / (1440 - 320)
+  ) !important;
+  line-height: 18px !important;
+}
+
+.small-text {
+  font-size: calc(
+    10.5px + (12 - 10.5) * (100vw - 320px) / (1440 - 320)
+  ) !important;
+}
+
+.sans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.moviebox {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.cc-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+input {
+  width: 525px;
+  height: 36px;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  padding: 0 35px 0 10px;
+  background-color: transparent;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+input:focus {
+  outline-color: #be123c;
+}
+
+.signin {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.menu-div {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: #be123c;
+
+  display: grid;
+  place-items: center;
+}
+
+.searchdiv {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.hero-container {
+  height: 350px;
+}
+
+.hero-text {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.text-holder {
+  width: 400px;
+}
+
+.imdb-image {
+  height: 20px;
+  width: 40px;
+}
+
+.hero-button {
+  width: max-content;
+  padding: 6px 6px;
+  border-radius: 6px;
+  background-color: #be123c;
+}
+
+.overview {
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+.hero-number {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.see-more {
+  color: #be123c;
+  font-size: calc(15px + (18 - 15) * (100vw - 320px) / (1440 - 320)) !important;
+}
+
+.card-gap {
+  row-gap: 80px;
+}
+
+.sidebar {
+  width: 226px;
+  height: 100vh;
+}
+
+.sidefixed {
+  position: fixed;
+  width: 226px;
+  height: 100vh;
+  border-right: 1px solid #333;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+  top: 0;
+  left: 0;
+}
+
+.movies {
+  background-color: rgba(190, 18, 60, 0.2);
+  border-right: 5px solid rgb(190, 18, 60);
+}
+
+.quiz {
+  background-color: rgba(190, 18, 60, 0.1);
+  border: 1px solid rgb(190, 18, 60);
+  border-radius: 20px;
+}
+
+.quiz h5 {
+  line-height: 22.5px;
+}
+
+.playing {
+  background-color: rgba(190, 18, 60, 0.2);
+  color: rgba(190, 18, 60);
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.overflow {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.scrollbody {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbody::-webkit-scrollbar {
+  display: none;
+}
+
+.video {
+  width: 100%;
+  height: 300px;
+}
+
+.firstDiv {
+  width: 100%;
+}
+
+.secondDiv {
+  width: 100%;
+}
+
+.content-box {
+  height: 55px;
+  width: 350px;
+  background: rgba(190, 18, 60);
+  color: white;
+  border-radius: 5px;
+}
+
+@media (min-width: 992px) {
+  .video-container {
+    padding-left: 40px !important;
+    padding-right: 60px !important;
+  }
+
+  .video {
+    height: 450px;
+    border-radius: 20px;
+  }
+
+  .firstDiv {
+    width: 64%;
+  }
+
+  .secondDiv {
+    width: 34%;
+  }
+}
+
+@media (min-width: 768px) {
+  .cc-container {
+    padding: 0 50px;
+  }
+  .hero-container {
+    height: 450px;
+  }
+
+  .video {
+    height: 400px;
+  }
+}
+@media (min-width: 1440px) {
+  .cc-container {
+    padding: 0 70px !important;
+  }
+
+  .hero-container {
+    height: 600px;
+  }
+}
