@@ -3,20 +3,6 @@ import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Card({ data, percentage }) {
-  function convertTMDBReleaseDateToUTC(releaseDate) {
-    const localDate = new Date(releaseDate + "T00:00:00"); // Assuming release time is 00:00:00
-    const utcYear = localDate.getUTCFullYear();
-    const utcMonth = localDate.getUTCMonth() + 1; // Month is zero-indexed, so add 1
-    const utcDay = localDate.getUTCDate();
-
-    const utcDateString = `${utcYear}-${String(utcMonth).padStart(
-      2,
-      "0"
-    )}-${String(utcDay).padStart(2, "0")}`;
-
-    return utcDateString;
-  }
-
   return (
     <div data-testid="movie-card">
       <Link to={`/movies/${data.id}`}>
