@@ -9,12 +9,11 @@ const DetailContent = ({ movie }) => {
   const writers = movie.credits.crew
     .filter((each) => each.job === "Writer")
     .slice(0, 3);
-  console.log(director);
 
   const stars = movie.credits.cast
     .filter((each) => each.known_for_department === "Acting")
     .slice(0, 3);
-  console.log("dygius", stars);
+
   return (
     <div>
       <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-0 justify-content-between mt-3">
