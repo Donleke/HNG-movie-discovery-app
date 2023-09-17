@@ -5,7 +5,6 @@ import { AiFillPlayCircle } from "react-icons/ai";
 function Hero({ data }) {
   const [current, setCurrent] = useState(0);
 
-  console.log(data);
   return (
     <div className="hero-container position-relative">
       <Image

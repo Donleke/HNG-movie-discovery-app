@@ -16,7 +16,7 @@ function Card({ data, percentage }) {
 
     return utcDateString;
   }
-  console.log(data);
+
   return (
     <div data-testid="movie-card">
       <Link to={`/movies/${data.id}`}>
