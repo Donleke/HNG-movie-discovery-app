@@ -26,8 +26,6 @@ function Detail() {
         const localDate = new Date(Date.UTC(...release_date.split("-")));
 
         setMovie({ ...data, release_date: localDate.toDateString() });
-
-        console.log(movie);
       } catch (error) {
         console.log(error);
       }
