@@ -21,7 +21,12 @@ function Detail() {
         const { data } = await axios.get(
           `${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=credits,recommendations,images,videos&include_video_language=en`
         );
-        setMovie(data);
+        const { release_date } = data;
+
+        const localDate = new Date(Date.UTC(...release_date.split("-")));
+
+        setMovie({ ...data, release_date: localDate.toDateString() });
+
         console.log(movie);
       } catch (error) {
         console.log(error);

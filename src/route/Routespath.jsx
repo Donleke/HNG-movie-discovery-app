@@ -15,7 +15,7 @@ export default function Routespath() {
     createRoutesFromElements(
       <Route path="/" element={<LayOut />} errorElement={<Error />}>
         <Route index element={<Home />} />
-        <Route path="/movie/:id" element={<Detail />} />
+        <Route path="/movies/:id" element={<Detail />} />
         {/* <Route path="movies/genres/:id" element={<Genres />} /> */}
         {/* <Route path="movies/popular" element={<Popular />} />
         <Route path="movies/top_rated/" element={<Toprated />} />
