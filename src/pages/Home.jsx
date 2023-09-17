@@ -24,7 +24,7 @@ function Home() {
         );
 
         setHeroMovies(response.data.results.slice(0, 5));
-        console.log(heroMovies);
+
         setFeaturedMovies(response.data.results.slice(0, 10));
       } catch (error) {
         console.log(error);
