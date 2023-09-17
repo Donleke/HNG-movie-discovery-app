@@ -1,11 +1,19 @@
 import { AiFillStar } from "react-icons/ai";
 
 function DetailStats({ movie }) {
-  const convertMinutesToUTC = (minutes) => {
-    const date = new Date(0);
-    date.setUTCMinutes(minutes);
-    return date.toISOString().substr(11, 8);
-  };
+  function convertTMDBReleaseDateToUTC(releaseDate) {
+    const localDate = new Date(releaseDate + "T00:00:00"); // Assuming release time is 00:00:00
+    const utcYear = localDate.getUTCFullYear();
+    const utcMonth = localDate.getUTCMonth() + 1; // Month is zero-indexed, so add 1
+    const utcDay = localDate.getUTCDate();
+
+    const utcDateString = `${utcYear}-${String(utcMonth).padStart(
+      2,
+      "0"
+    )}-${String(utcDay).padStart(2, "0")}`;
+
+    return utcDateString;
+  }
   return (
     <div className="d-flex flex-wrap gap-3 gap-lg-0 justify-content-lg-between">
       <div className="d-flex gap-2 flex-wrap align-items-center gap-3">
@@ -21,7 +29,7 @@ function DetailStats({ movie }) {
           }}
         ></div>
         <h3 data-testid="movie-release-date" className="mb-0">
-          {movie.release_date.slice(0, 4)}
+          {convertTMDBReleaseDateToUTC(movie.release_date)}
         </h3>
         <div
           style={{
@@ -41,7 +49,7 @@ function DetailStats({ movie }) {
           }}
         />
         <h3 data-testid="movie-runtime" className="mb-0">
-          {convertMinutesToUTC(movie.runtime)}
+          {movie.runtime}
           {/* {movie.runtime < 60
             ? `${movie.runtime}mins `
             : movie.runtime === 60
