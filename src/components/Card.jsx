@@ -19,7 +19,7 @@ function Card({ data, percentage }) {
   console.log(data);
   return (
     <div data-testid="movie-card">
-      <Link to={`/movie/${data.id}`}>
+      <Link to={`/movies/${data.id}`}>
         <div>
           <Image
             className="w-100 h-100"
@@ -29,7 +29,7 @@ function Card({ data, percentage }) {
         </div>
       </Link>
 
-      <Link to={`/movie/${data.id}`}>
+      <Link to={`/movies/${data.id}`}>
         <h3 data-testid="movie-title" className="mt-3">
           {data.title}
         </h3>
