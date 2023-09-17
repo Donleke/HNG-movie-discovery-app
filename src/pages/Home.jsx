@@ -40,9 +40,6 @@ function Home() {
     return Math.floor(Math.random() * (100 - 70 + 1)) + 70;
   }
 
-  console.log(heroMovies);
-  console.log(featuredMovies);
-
   return (
     <div>
       <Navbar />
