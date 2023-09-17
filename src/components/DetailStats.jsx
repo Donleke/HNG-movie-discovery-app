@@ -1,6 +1,11 @@
 import { AiFillStar } from "react-icons/ai";
 
 function DetailStats({ movie }) {
+  const convertMinutesToUTC = (minutes) => {
+    const date = new Date(0);
+    date.setUTCMinutes(minutes);
+    return date.toISOString().substr(11, 8);
+  };
   return (
     <div className="d-flex flex-wrap gap-3 gap-lg-0 justify-content-lg-between">
       <div className="d-flex gap-2 flex-wrap align-items-center gap-3">
@@ -36,7 +41,7 @@ function DetailStats({ movie }) {
           }}
         />
         <h3 data-testid="movie-runtime" className="mb-0">
-          {movie.runtime} mins
+          {convertMinutesToUTC(movie.runtime)}
           {/* {movie.runtime < 60
             ? `${movie.runtime}mins `
             : movie.runtime === 60
